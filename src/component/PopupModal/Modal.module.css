@@ -1,0 +1,146 @@
+/* Modal.module.css */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%; /* Adjusted for responsiveness */
+    max-width: 550px; /* Adjusted for responsiveness */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+  }
+  
+  .modalHeader h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+  }
+  
+  .closeButton:hover {
+    color: #333;
+  }
+  
+  .modalBody {
+    padding: 10px 0;
+  }
+  
+  .userDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .userAvatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 2px solid #ddd;
+  }
+  
+  .userField {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .userField label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .userField span {
+    color: #555;
+    text-align: right;
+  }
+  
+  /* Modal.module.css */
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%; /* Adjusted for responsiveness */
+    max-width: 550px; /* Adjusted for responsiveness */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* For smaller screens (e.g., mobile devices) */
+  @media screen and (max-width: 600px) {
+  
+    .closeButton {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .modalContent {
+        width: 85%; /* Adjusted for responsiveness */
+        max-width: 85%; /* Adjusted for responsiveness */
+        height: 90%;
+    }
+  
+    .modalHeader {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+    }
+  
+    .modalHeader h2 {
+        margin: 0; /* Reset margin */
+        font-size: 1.25rem;
+    }
+  
+    .mobileDescription {
+      display: -webkit-box; 
+      -webkit-box-orient: vertical; 
+      -webkit-line-clamp: 3; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+    }
+  }
+  
